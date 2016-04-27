@@ -29,4 +29,16 @@ public class Dijkstra {
         this.graphe = g;
     }
     
+    public int infini(){
+        int res = 0;
+        for(int i = 1; i <= this.graphe.getNbSommet(); i++){
+            for(int j = 1; j <= this.graphe.getNbSommet(); j++){
+            res+= this.graphe.getMatrice(i, j);
+            }
+        }
+        
+        return res+1;
+        
+    }
+    
 }

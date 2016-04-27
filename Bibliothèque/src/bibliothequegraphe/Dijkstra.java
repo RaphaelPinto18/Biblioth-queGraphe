@@ -45,11 +45,29 @@ public class Dijkstra {
         
         for(int i=0;i<graphe.getNbSommet();i++) {
             
-            this.sommets.add(i);
+            this.sommets.add(i+1);
             this.mark.add(Boolean.FALSE);
             this.distances.add(-1);
             this.antecedents.add(-1);
             
+        }
+    }
+    
+    public void afficheTableaux(){
+        for(int e : this.sommets){
+            System.out.print(e + " ");
+        }
+        System.out.println("\n");
+        for(boolean e : this.mark){
+            System.out.print(e + " ");
+        }
+        System.out.println("\n");
+        for(int e : this.distances){
+            System.out.print(e + " ");
+        }
+        System.out.println("\n");
+        for(int e : this.antecedents){
+            System.out.print(e + " ");
         }
     }
     

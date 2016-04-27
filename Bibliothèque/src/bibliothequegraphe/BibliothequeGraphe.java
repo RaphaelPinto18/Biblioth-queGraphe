@@ -50,6 +50,8 @@ public class BibliothequeGraphe {
         
         Dijkstra d = new Dijkstra(test(4));
         System.out.println(d.infini());
+        d.intitialisation();
+        d.afficheTableaux();
         
                            //on l'affiche
         

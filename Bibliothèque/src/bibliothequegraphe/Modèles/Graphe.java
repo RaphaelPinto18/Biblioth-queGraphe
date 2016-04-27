@@ -47,6 +47,13 @@ public class Graphe {
         }
     }
     
+    public void ajouterArc(int i, int j, int val){
+        this.modifierMatrice(i, j, val);
+        if(this.orienté){
+           this.modifierMatrice(j, i, val);
+        }
+    }
+    
     //renvoie la valeur du coefficient (i,j) de la matrice d'adjacence (0 par défaut)
     public int getMatrice(int i,int j) {
         if(i<=0 || j<=0) {

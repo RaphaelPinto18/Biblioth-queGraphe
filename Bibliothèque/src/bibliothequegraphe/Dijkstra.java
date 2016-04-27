@@ -29,4 +29,34 @@ public class Dijkstra {
         this.graphe = g;
     }
     
+    /**
+     * Méthode d'intialisation de l'algorithm
+     */
+    public void initialisation() {
+        for (int i=0; i<graphe.getNbSommet();i++) 
+        {   this.sommets.add(i);
+            
+        }
+        
+        for (int i=0;i<sommets.size();i++)
+        {
+            this.mark.add(Boolean.FALSE);
+        }
+        
+         for (int i=0;i<sommets.size();i++)
+        {
+            this.distances.add(-1);
+        }    
+        
+          for (int i=0;i<sommets.size();i++)
+        {
+            this.antecedents.add(null);
+        }
+        
+        
+        
+        
+    }
+    
+    
 }

@@ -47,7 +47,7 @@ public class Dijkstra {
             
             this.sommets.add(i+1);
             this.mark.add(Boolean.FALSE);
-            this.distances.add(-1);
+            this.distances.add(this.infini());
             this.antecedents.add(-1);
             
         }

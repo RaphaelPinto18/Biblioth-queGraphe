@@ -41,4 +41,16 @@ public class Dijkstra {
         
     }
     
+    public void intitialisation() {
+        
+        for(int i=0;i<graphe.getNbSommet();i++) {
+            
+            this.sommets.add(i);
+            this.mark.add(Boolean.FALSE);
+            this.distances.add(-1);
+            this.antecedents.add(-1);
+            
+        }
+    }
+    
 }

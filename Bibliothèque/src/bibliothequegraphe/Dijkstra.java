@@ -15,11 +15,11 @@ import java.util.ArrayList;
  */
 public class Dijkstra {
     
-    private ArrayList<Integer> sommets;
-    private ArrayList<Boolean> mark;
-    private ArrayList<Integer> distances;
-    private ArrayList<Integer> antecedents;
-    private Graphe graphe;
+    private ArrayList<Integer> sommets=null;
+    private ArrayList<Boolean> mark=null;
+    private ArrayList<Integer> distances=null;
+    private ArrayList<Integer> antecedents=null;
+    private Graphe graphe=null;
     
     public Dijkstra(Graphe g){
         this.sommets = new ArrayList();

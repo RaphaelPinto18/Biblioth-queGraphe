@@ -25,6 +25,19 @@ public class BibliothequeGraphe {
        fenetre.setGraphe(grapheVisuel);
     }
     
+    public static Graphe test(int n){
+        Graphe g = new Graphe();
+        g.setNbSommet(n);
+        for(int i = 1; i <= g.getNbSommet(); i++){
+            for(int j = 1; j <= g.getNbSommet(); j++){
+                g.ajouterArc(i, j, 1);
+            }
+        }
+        afficher(g); 
+        return g;
+         
+    }
+    
     
     
     
@@ -35,26 +48,10 @@ public class BibliothequeGraphe {
         //lance l'IHM
         fenetre = new Fenetre();
         
-        //Un exemple de définition de graphe
-        Graphe monGraphe = new Graphe();        //on construit le graphe
-        monGraphe.setNbSommet(7);               //on fixe le nombre sommets
-        monGraphe.setOrientation(true);         //on indique qu'il est orienté
+        Dijkstra d = new Dijkstra(test(4));
+        System.out.println(d.infini());
         
-        monGraphe.modifierMatrice(1, 2, 1);     //on définit la matrice d'adjacence
-        monGraphe.modifierMatrice(2, 3, 1);
-        monGraphe.modifierMatrice(3, 2, 1);
-        monGraphe.modifierMatrice(3, 5, 1);
-        monGraphe.modifierMatrice(4, 5, 1);
-        monGraphe.modifierMatrice(6, 2, 2);
-        monGraphe.modifierMatrice(7, 5, 1);
-        monGraphe.modifierMatrice(3, 6, 1);
-        monGraphe.modifierMatrice(3, 7, 3);
-        monGraphe.modifierMatrice(7, 6, 1);
-        monGraphe.modifierMatrice(7, 4, 1);
-        monGraphe.modifierMatrice(1, 5, 1);
-        monGraphe.modifierMatrice(5, 1, 1);
-        
-        afficher(monGraphe);                    //on l'affiche
+                           //on l'affiche
         
     }
     
